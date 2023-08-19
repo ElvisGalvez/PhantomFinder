@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.1144c3fa.css",
-    "main.js": "/static/js/main.cd3d3846.js",
-    "static/js/787.1b11865a.chunk.js": "/static/js/787.1b11865a.chunk.js",
-    "static/media/asile.jpg": "/static/media/asile.3e22979f7c583c9ac1b8.jpg",
-    "index.html": "/index.html",
-    "main.1144c3fa.css.map": "/static/css/main.1144c3fa.css.map",
-    "main.cd3d3846.js.map": "/static/js/main.cd3d3846.js.map",
-    "787.1b11865a.chunk.js.map": "/static/js/787.1b11865a.chunk.js.map"
+    "main.css": "/PhantomFinder/static/css/main.582df449.css",
+    "main.js": "/PhantomFinder/static/js/main.b49b39fe.js",
+    "static/js/787.1b11865a.chunk.js": "/PhantomFinder/static/js/787.1b11865a.chunk.js",
+    "static/media/asile.jpg": "/PhantomFinder/static/media/asile.3e22979f7c583c9ac1b8.jpg",
+    "index.html": "/PhantomFinder/index.html",
+    "main.582df449.css.map": "/PhantomFinder/static/css/main.582df449.css.map",
+    "main.b49b39fe.js.map": "/PhantomFinder/static/js/main.b49b39fe.js.map",
+    "787.1b11865a.chunk.js.map": "/PhantomFinder/static/js/787.1b11865a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1144c3fa.css",
-    "static/js/main.cd3d3846.js"
+    "static/css/main.582df449.css",
+    "static/js/main.b49b39fe.js"
   ]
 }
