@@ -1,0 +1,38 @@
+.evidence-filter-container {
+    background-color: #1e1e1e;  
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
+    color: #fff; 
+}
+
+.evidence-filter-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin: 0px 10px 20px 10px;
+}
+
+.evidence-button {
+    margin: 0px 10px 0px 10px;
+    padding: 8px 16px;
+    border: 1px solid #555;  
+    border-radius: 5px;
+    background-color: #2a2a2a;  
+    color: #fff;  
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.15s; 
+}
+
+.evidence-button:hover {
+    background-color: #3a3a3a;  
+    transform: scale(1.05);  
+}
+
+.evidence-button.active {
+    background-color: #0077ff;  
+    transform: scale(1.1);  
+    border: none;  
+    box-shadow: 0 0 10px rgba(0, 119, 255, 0.6); 
+    color: #1e1e1e;  
+}

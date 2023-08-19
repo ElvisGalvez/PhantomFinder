@@ -1,0 +1,21 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #272626; 
+    padding: 15px 30px; 
+    color: white; 
+  }
+  
+  .header-container h1 {
+    font-size: 26px;
+    margin: 0;
+    flex-grow: 1; 
+  }
+
+  .header-slogan {
+    color: #FFD700;
+    font-size: 18px;
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
