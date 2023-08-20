@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/PhantomFinder/static/css/main.582df449.css",
-    "main.js": "/PhantomFinder/static/js/main.b49b39fe.js",
+    "main.css": "/PhantomFinder/static/css/main.2b8a5cb2.css",
+    "main.js": "/PhantomFinder/static/js/main.50a8033e.js",
     "static/js/787.1b11865a.chunk.js": "/PhantomFinder/static/js/787.1b11865a.chunk.js",
     "static/media/asile.jpg": "/PhantomFinder/static/media/asile.3e22979f7c583c9ac1b8.jpg",
     "index.html": "/PhantomFinder/index.html",
-    "main.582df449.css.map": "/PhantomFinder/static/css/main.582df449.css.map",
-    "main.b49b39fe.js.map": "/PhantomFinder/static/js/main.b49b39fe.js.map",
+    "main.2b8a5cb2.css.map": "/PhantomFinder/static/css/main.2b8a5cb2.css.map",
+    "main.50a8033e.js.map": "/PhantomFinder/static/js/main.50a8033e.js.map",
     "787.1b11865a.chunk.js.map": "/PhantomFinder/static/js/787.1b11865a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.582df449.css",
-    "static/js/main.b49b39fe.js"
+    "static/css/main.2b8a5cb2.css",
+    "static/js/main.50a8033e.js"
   ]
 }
