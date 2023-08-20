@@ -68,7 +68,7 @@
 }
 
 .highlighted-evidence {
-    color: yellow;
+    color: rgb(14, 160, 62);
 }
 
 .entity-card-wrapper::before, .entity-card-wrapper::after {

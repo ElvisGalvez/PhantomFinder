@@ -36,10 +36,10 @@
 }
 
 .evidence-button.active {
-    background-color: #0077ff;  
+    background-color: #09ca19;  
     transform: scale(1.1);  
     border: none;  
-    box-shadow: 0 0 10px rgba(0, 119, 255, 0.6); 
+    box-shadow: 0 0 10px rgba(2, 204, 79, 0.6); 
     color: #1e1e1e;  
 }
 
@@ -54,6 +54,13 @@
     transform: rotate(180deg);
 }
 
+.evidence-button.refuted {
+    background-color: #d80b27;  
+    transform: scale(1.1);  
+    border: none;  
+    box-shadow: 0 0 10px rgba(252, 99, 39, 0.6); 
+    color: #1e1e1e;  
+}
 
 @media (max-width: 790px) {
     .evidence-button {
@@ -67,6 +74,24 @@
     }
 }
 
+.reset-button {
+    margin: 0px 0px 0px 40px;
+    padding: 5px 14px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #797979; 
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.15s;
+    text-align: center; 
+}
+
+.reset-button:hover {
+    background-color: #4a4a4a; 
+    transform: scale(1.05);
+}
+
+
 
 @media (max-width: 790px) {
     .evidence-filter-container.menu-open .evidence-button {
@@ -76,5 +101,14 @@
         padding: 5px 10px;
         font-size: 14px;
     }
+
+    .reset-button {
+        margin: 10px 0;
+        padding: 5px 10px;
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        width: 100%; 
+    }    
     
 }

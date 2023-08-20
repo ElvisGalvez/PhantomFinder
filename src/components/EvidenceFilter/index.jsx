@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Ajoutez useEffect à votre importation
 import './EvidenceFilter.css';
 
 function EvidenceFilter({ onFilterChange }) {
@@ -12,24 +12,36 @@ function EvidenceFilter({ onFilterChange }) {
     "Ultraviolet"
   ];
   
-  const [activeEvidences, setActiveEvidences] = useState([]);
+  const [evidenceState, setEvidenceState] = useState({});
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const resetEvidences = () => {
+    setEvidenceState({});
+  };
 
   const toggleEvidence = evidence => {
-    if (activeEvidences.includes(evidence)) {
-      setActiveEvidences(prev => {
-        const updatedEvidences = prev.filter(e => e !== evidence);
-        onFilterChange(updatedEvidences); 
-        return updatedEvidences;
-      });
+    const current = evidenceState[evidence];
+    if (!current) {
+        setEvidenceState(prev => ({ ...prev, [evidence]: 'confirmed' }));
+    } else if (current === 'confirmed') {
+        setEvidenceState(prev => ({ ...prev, [evidence]: 'refuted' }));
     } else {
-      setActiveEvidences(prev => {
-        const updatedEvidences = [...prev, evidence];
-        onFilterChange(updatedEvidences); 
-        return updatedEvidences;
-      });
+        const newState = { ...evidenceState };
+        delete newState[evidence];
+        setEvidenceState(newState);
     }
-  }
+  };
+
+  const getButtonClass = (evidence) => {
+    switch (evidenceState[evidence]) {
+        case 'confirmed': return 'active'; // ou la classe CSS pour le bleu
+        case 'refuted': return 'refuted'; // ou la classe CSS pour le rouge
+        default: return '';
+    }
+  };
+
+  useEffect(() => {
+    onFilterChange(evidenceState);
+  }, [evidenceState, onFilterChange]);
 
   return (
     <div className={`evidence-filter-container ${isMenuOpen ? 'menu-open' : ''}`}>
@@ -39,14 +51,18 @@ function EvidenceFilter({ onFilterChange }) {
       </div>
 
       {evidences.map(evidence => (
-          <button 
-              key={evidence} 
-              onClick={() => toggleEvidence(evidence)}
-              className={`evidence-button ${activeEvidences.includes(evidence) ? 'active' : ''}`}
-          >
-              {evidence}
-          </button>
+        <button 
+          key={evidence} 
+          onClick={() => toggleEvidence(evidence)}
+          className={`evidence-button ${getButtonClass(evidence)}`}
+        >
+          {evidence}
+        </button>
       ))}
+
+      <button onClick={resetEvidences} className="reset-button">
+        Réinitialiser
+      </button>
     </div>
   );
 }
