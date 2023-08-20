@@ -1,6 +1,6 @@
 .evidence-filter-container {
     background-color: #1e1e1e;  
-    padding: 20px;
+    padding: 10px 10px 0px 0px;
     border-radius: 8px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
     color: #fff; 
@@ -11,14 +11,16 @@
 }
 
 .evidence-filter-title {
+    display: none;
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: bold;
     margin: 0px 10px 20px 10px;
+    display: none;
 }
 
 .evidence-button {
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 20px 10px;
     padding: 8px 16px;
     border: 1px solid #555;  
     border-radius: 5px;
@@ -39,4 +41,40 @@
     border: none;  
     box-shadow: 0 0 10px rgba(0, 119, 255, 0.6); 
     color: #1e1e1e;  
+}
+
+.arrow-icon {
+    display: inline-block;
+    margin-left: 10px;
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.arrow-icon.up {
+    transform: rotate(180deg);
+}
+
+
+@media (max-width: 790px) {
+    .evidence-button {
+        display: none; 
+    }
+
+    .evidence-filter-title {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+}
+
+
+@media (max-width: 790px) {
+    .evidence-filter-container.menu-open .evidence-button {
+        display: block; 
+        width: 100%; 
+        margin: 10px 0;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    
 }

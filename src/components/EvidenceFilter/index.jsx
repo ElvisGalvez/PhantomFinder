@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './EvidenceFilter.css'
+import './EvidenceFilter.css';
 
 function EvidenceFilter({ onFilterChange }) {
   const evidences = [
@@ -13,6 +13,7 @@ function EvidenceFilter({ onFilterChange }) {
   ];
   
   const [activeEvidences, setActiveEvidences] = useState([]);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleEvidence = evidence => {
     if (activeEvidences.includes(evidence)) {
@@ -31,8 +32,12 @@ function EvidenceFilter({ onFilterChange }) {
   }
 
   return (
-    <div className="evidence-filter-container">
-      <div className="evidence-filter-title">Par filtre</div>
+    <div className={`evidence-filter-container ${isMenuOpen ? 'menu-open' : ''}`}>
+      <div className="evidence-filter-title" onClick={() => setMenuOpen(!isMenuOpen)}>
+        {isMenuOpen ? "Masquer les filtres" : "Afficher les filtres"}
+        <i className={`fa-solid arrow-icon ${isMenuOpen ? 'fa-circle-up' : 'fa-circle-down'}`}></i>
+      </div>
+
       {evidences.map(evidence => (
           <button 
               key={evidence} 
