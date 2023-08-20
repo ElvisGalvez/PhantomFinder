@@ -6,12 +6,31 @@
     margin: 10px;
     background-color: #272626;
     color: #fff;
-    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow-y: auto;
     text-align: justify;  
     text-justify: inter-word;
+     scrollbar-color: #FFD700 #444; /* color thumb and track */
+    scrollbar-width: thin; /* or "auto" or "thin" */
   }
+
+  .entity-card::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+
+.entity-card::-webkit-scrollbar-thumb {
+    background-color: #686666; /* Couleur de la poignée de la barre de défilement */
+    border-radius: 5px; /* Arrondi des coins */
+}
+
+.entity-card::-webkit-scrollbar-thumb:hover {
+    background-color: #FFB700; /* Couleur de la poignée de la barre de défilement au survol */
+}
+
+.entity-card::-webkit-scrollbar-track {
+    background-color: #444; /* Couleur de la piste (fond) */
+    border-radius: 5px; /* Arrondi des coins */
+}
   
   .entity-name {
     font-size: 24px;
@@ -50,4 +69,22 @@
 
 .highlighted-evidence {
     color: yellow;
+}
+
+.entity-card-wrapper::before, .entity-card-wrapper::after {
+    content: "";
+    display: block;
+    background-color: #272626;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.entity-card-wrapper::before {
+    top: 0;
+}
+
+.entity-card-wrapper::after {
+    content: none;
 }

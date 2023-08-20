@@ -4,6 +4,10 @@
     border-radius: 8px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
     color: #fff; 
+    position: -webkit-sticky; /* Pour Safari */
+    position: sticky;
+    top: 0; 
+    z-index: 100; 
 }
 
 .evidence-filter-title {

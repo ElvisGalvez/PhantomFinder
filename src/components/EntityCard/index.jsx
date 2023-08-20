@@ -3,6 +3,7 @@ import './EntityCard.css';
 
 function EntityCard({ entity, selectedEvidences }) {
     return (
+      <div className="entity-card-wrapper">
       <div className="entity-card">
         <h2 className="entity-name">{entity.nom}</h2>
         <div className="entity-evidences">
@@ -26,6 +27,7 @@ function EntityCard({ entity, selectedEvidences }) {
             <li key={index}>{power}</li>
           ))}
         </ul>
+      </div>
       </div>
     );
   }
